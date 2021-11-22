@@ -191,6 +191,18 @@ decreaseBtn.addEventListener("click", () => {
   updateSize();
 });
 
+// color btn
+
+colorBtn.addEventListener("change", (e) => {
+  color = e.target.value;
+});
+
+// clear btn
+
+clearBtn.addEventListener("click", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
 // updating the number of the stroke width Dynamically
 
 function updateSize() {
