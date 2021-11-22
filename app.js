@@ -122,3 +122,34 @@ let isPressed = false;
 let color = "peachpuff";
 let x = undefined;
 let y = undefined;
+
+// remember the methods moveTo() and lineTo()
+
+canvas.addEventListener("mousedown", (e) => {
+  isPressed = true;
+  x = e.offsetX;
+  y = e.offsetY;
+});
+
+canvas.addEventListener("mouseup", (e) => {
+  isPressed = false;
+  x = undefined;
+  y = undefined;
+});
+
+// line drawing function
+
+function drawLine(x1, y1, x2, y2) {
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = size;
+  ctx.stroke();
+}
+
+// circles drawing function
+
+function drawCircle(x, y) {
+  ctx.beginPath();
+}
