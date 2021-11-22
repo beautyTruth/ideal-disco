@@ -103,3 +103,22 @@ https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
 // }
 
 // this too shall pass
+
+/*
+my code
+*/
+
+const canvas = document.getElementById("drawing-canvas");
+const increaseBtn = document.querySelector("#increase");
+const decreaseBtn = document.querySelector("#decrease");
+const strokeThickness = document.querySelector("#size");
+const colorBtn = document.querySelector("#color");
+const clearBtn = document.querySelector("#clear");
+
+const ctx = canvas.getContext("2d");
+
+let size = 10;
+let isPressed = false;
+let color = "peachpuff";
+let x = undefined;
+let y = undefined;
