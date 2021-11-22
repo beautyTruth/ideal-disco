@@ -168,3 +168,31 @@ function drawCircle(x, y) {
   ctx.fillStyle = color;
   ctx.fill();
 }
+
+// make bigger or smaller button
+
+increaseBtn.addEventListener("click", () => {
+  size += 1;
+
+  if (size > 50) {
+    size = 50;
+  }
+
+  updateSize();
+});
+
+decreaseBtn.addEventListener("click", () => {
+  size -= 1;
+
+  if (size < 1) {
+    size = 1;
+  }
+
+  updateSize();
+});
+
+// updating the number of the stroke width Dynamically
+
+function updateSize() {
+  strokeThickness.innerText = size;
+}
